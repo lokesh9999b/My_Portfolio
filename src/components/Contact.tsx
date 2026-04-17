@@ -107,7 +107,7 @@ export default function Contact() {
               <div className="space-y-5">
                 {[
                   { icon: Mail, label: 'Email', value: import.meta.env.VITE_EMAIL },
-                  { icon: MapPin, label: 'Location', value: 'Mumbai, India' },
+                  { icon: MapPin, label: 'Location', value: 'Hyderabad, Telangana, India' },
                   { icon: Zap, label: 'Status', value: 'Open to opportunities' },
                 ].map(({ icon: Icon, label, value }) => (
                   <div key={label} className="flex items-center gap-4">

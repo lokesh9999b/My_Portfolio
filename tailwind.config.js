@@ -3,6 +3,10 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        heading: ['Outfit', 'sans-serif'],
+      },
       colors: {
         'amber-glow': '#F5C518',
         'amber-light': '#FFD84D',
