@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Download, ArrowDown, Github, Linkedin, Twitter } from 'lucide-react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const techStack = ['Angular', 'TypeScript', 'Node.js', 'Apache Kafka', 'Docker'];
 
@@ -204,8 +205,10 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12 pt-24 pb-16" style={{ zIndex: 2 }}>
-        <div className="max-w-4xl">
-          <div
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          {/* Left Text Content */}
+          <div className="max-w-4xl lg:w-2/3">
+            <div
             className="mb-4 animate-fade-in"
             style={{ animationDelay: '0.1s', opacity: 0 }}
           >
@@ -285,6 +288,24 @@ export default function Hero() {
               </a>
             ))}
           </div>
+        </div>
+
+        {/* Right Avatar GIF */}
+        <div 
+          className="hidden lg:flex w-full lg:w-1/3 justify-center items-center animate-fade-up pointer-events-none"
+          style={{ animationDelay: '1.2s', opacity: 0 }}
+        >
+          <div className="relative group pointer-events-auto">
+            {/* Ambient background glow to align with theme */}
+            <div className="absolute inset-0 bg-amber-glow/20 rounded-full blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-700" />
+            <div className="relative w-64 h-64 lg:w-[350px] lg:h-[350px] drop-shadow-[0_0_40px_rgba(245,197,24,0.15)] group-hover:drop-shadow-[0_0_60px_rgba(245,197,24,0.3)] hover:scale-105 transition-all duration-700 pointer-events-auto">
+              <DotLottieReact
+                src="https://lottie.host/d0654550-c350-4740-a185-a57f05fd30ca/5DbBSZGqT7.lottie"
+                stateMachineId="StateMachine1"
+              />
+            </div>
+          </div>
+        </div>
         </div>
       </div>
 

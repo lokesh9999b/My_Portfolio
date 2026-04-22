@@ -49,3 +49,13 @@ body {
 .text-balance {
   text-wrap: balance;
 }
+
+@keyframes floatWaving {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(3deg); }
+  50% { transform: translateY(-18px) rotate(0deg); }
+  75% { transform: translateY(-10px) rotate(-3deg); }
+}
+.animate-float-waving {
+  animation: floatWaving 6s ease-in-out infinite;
+}
