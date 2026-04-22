@@ -1,43 +1,51 @@
-import { ExternalLink, BookOpen, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, BookOpen, ArrowUpRight, Github } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useEffect, useRef, useState } from 'react';
 
 const projects = [
   {
-    title: 'High Frequency Trading Engine',
-    hook: 'Sub-millisecond order execution that never misses a tick.',
+    title: 'High-Frequency Crypto Trading Engine',
+    hook: 'Real-time trade monitoring platform with live sub-millisecond updates.',
     description:
-      'Built an HFT engine using Angular 19 and Node.js that streams live market data via WebSockets and Apache Kafka. Achieved sub-100ms order execution with real-time price graphs powered by Lightweight Charts — handling thousands of ticks per second without breaking a sweat.',
-    tech: ['Angular 19', 'Node.js', 'Apache Kafka', 'WebSockets', 'Redis'],
+      'Built a high-performance data pipeline and trading engine. Streams live BTC/USDT data from Finnhub via WebSockets, processed through Apache Kafka and Redis for low-latency updates, and persisted in MongoDB for historical trend analysis.',
+    tech: ['Angular', 'Node.js', 'Kafka', 'Redis', 'MongoDB', 'Docker'],
     image: 'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800',
     accentHue: '#F5C518',
+    githubUrl: 'https://github.com/lokesh9999b/Trading-Project',
+    liveUrl: '',
   },
   {
-    title: 'AI-Powered Security App',
+    title: 'Security Compliance Portal',
     hook: 'Zero-trust visitor intelligence powered by machine learning.',
     description:
-      'Developed an enterprise security platform with AI-based face recognition and real-time threat detection. Integrates with CCTV feeds, provides automated alerts, and generates compliance reports — replacing manual guards with always-on intelligent surveillance.',
-    tech: ['Angular', 'Node.js', 'Python (AI/ML)', 'MongoDB', 'Docker'],
+      'An enterprise security platform and AI-driven compliance application. Utilized Groq LLM to automate remediation plans, reducing manual resolution times and integrating AI intelligence into enterprise security workflows.',
+    tech: ['Angular', 'Node.js', 'Python (AI/ML)', 'LLM', 'Docker'],
     image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800',
     accentHue: '#F5C518',
-  },
-  {
-    title: 'Real-Time Trading Dashboard',
-    hook: 'Institution-grade order book and analytics — in the browser.',
-    description:
-      'Full-featured trading dashboard with live candlestick charts, order-book depth visualization, P&L tracking, and multi-symbol watchlists. Built with Angular Signals for zero-flicker reactive UI, integrating REST and WebSocket feeds seamlessly.',
-    tech: ['Angular 18', 'TypeScript', 'RxJS', 'Lightweight Charts', 'Node.js'],
-    image: 'https://images.pexels.com/photos/7567557/pexels-photo-7567557.jpeg?auto=compress&cs=tinysrgb&w=800',
-    accentHue: '#F5C518',
+    githubUrl: '',
+    liveUrl: '',
   },
   {
     title: 'Smart Employee Attendance App',
-    hook: 'Effortless attendance tracking with QR codes and biometric sync.',
+    hook: 'Effortless attendance tracking with geofencing and image verification.',
     description:
-      'Cross-platform attendance solution using Angular with QR code scanning, GPS check-in validation, and biometric integration. Real-time reporting dashboard gives HR instant visibility into attendance patterns, leaves, and payroll-ready exports.',
+      'A secure Employee Attendance System featuring complex Role-Based Access Control (RBAC) and dynamic validation workflows. Achieved 99% accuracy in automated payroll disbursement through reliable geofencing and photo check-ins.',
     tech: ['Angular', 'Node.js', 'MongoDB', 'REST APIs', 'Docker'],
     image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
     accentHue: '#F5C518',
+    githubUrl: 'https://github.com/lokesh9999b/ifl-Attendance-Application',
+    liveUrl: '',
+  },
+  {
+    title: 'Pastebin Lite',
+    hook: 'A lightning-fast, lightweight snippet sharing application.',
+    description:
+      'Developed a modern pastebin clone with a clean UI and seamless code-sharing links. Built to quickly share code snippets and text passages with syntax highlighting focus and robust URL generation.',
+    tech: ['TypeScript', 'React', 'Next.js', 'Tailwind CSS'],
+    image: 'https://images.pexels.com/photos/7567557/pexels-photo-7567557.jpeg?auto=compress&cs=tinysrgb&w=800',
+    accentHue: '#F5C518',
+    githubUrl: 'https://github.com/lokesh9999b/pastebin-lite',
+    liveUrl: 'https://pastebin-lite-self-beta.vercel.app',
   },
 ];
 
@@ -92,14 +100,28 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         </div>
 
         <div className="flex gap-3">
-          <button className="flex items-center gap-2 px-4 py-2 bg-amber-glow text-black text-xs font-bold rounded-full hover:bg-amber-light transition-all duration-200 hover:scale-105 active:scale-95">
-            <ExternalLink size={13} />
-            Live Demo
-          </button>
-          <button className="flex items-center gap-2 px-4 py-2 border border-dark-4 text-text-secondary text-xs font-medium rounded-full hover:border-amber-glow/40 hover:text-white transition-all duration-200">
-            <BookOpen size={13} />
-            View Case Study
-          </button>
+          {project.liveUrl ? (
+            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-amber-glow text-black text-xs font-bold rounded-full hover:bg-amber-light transition-all duration-200 hover:scale-105 active:scale-95">
+              <ExternalLink size={13} />
+              Live Demo
+            </a>
+          ) : (
+            <button className="flex items-center gap-2 px-4 py-2 bg-amber-glow text-black text-xs font-bold rounded-full hover:bg-amber-light transition-all duration-200 hover:scale-105 active:scale-95 opacity-50 cursor-not-allowed">
+              <ExternalLink size={13} />
+              Live Demo
+            </button>
+          )}
+          {project.githubUrl ? (
+            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 border border-dark-4 text-text-secondary text-xs font-medium rounded-full hover:border-amber-glow/40 hover:text-white transition-all duration-200">
+              <Github size={13} />
+              View Source
+            </a>
+          ) : (
+            <button className="flex items-center gap-2 px-4 py-2 border border-dark-4 text-text-secondary text-xs font-medium rounded-full hover:border-amber-glow/40 hover:text-white transition-all duration-200 opacity-50 cursor-not-allowed">
+              <BookOpen size={13} />
+              Internal Project
+            </button>
+          )}
         </div>
       </div>
     </div>
