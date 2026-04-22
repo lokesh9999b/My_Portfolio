@@ -33,8 +33,8 @@ function GalaxyCanvas() {
       const speed = r > 1.4
         ? Math.random() * 0.8 + 0.9   // fast — foreground layer
         : r > 0.8
-        ? Math.random() * 0.5 + 0.4   // medium — mid layer
-        : Math.random() * 0.25 + 0.15; // slow  — background layer
+          ? Math.random() * 0.5 + 0.4   // medium — mid layer
+          : Math.random() * 0.25 + 0.15; // slow  — background layer
       return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -209,103 +209,103 @@ export default function Hero() {
           {/* Left Text Content */}
           <div className="max-w-4xl lg:w-2/3">
             <div
-            className="mb-4 animate-fade-in"
-            style={{ animationDelay: '0.1s', opacity: 0 }}
-          >
-            <span className="text-amber-glow text-xs font-bold tracking-[0.3em] uppercase border border-amber-glow/30 px-3 py-1.5 rounded-full">
-              Hello, I&apos;m
-            </span>
-          </div>
-
-          <h1
-            className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight mb-6 animate-fade-up"
-            style={{ animationDelay: '0.2s', opacity: 0 }}
-          >
-            {typedText}
-            {showCursor && (
-              <span className="text-amber-glow animate-blink">|</span>
-            )}
-          </h1>
-
-          <p
-            className="text-lg sm:text-xl lg:text-2xl text-text-secondary font-light leading-relaxed mb-8 max-w-3xl animate-fade-up"
-            style={{ animationDelay: '0.5s', opacity: 0 }}
-          >
-            Software Engineer at
-            <span className="text-amber-glow font-medium"> Sify Technologies, turning hard problems into fast, reliable full-stack products.</span>
-          </p>
-
-          <div
-            className="flex flex-wrap gap-2 mb-10 animate-fade-up"
-            style={{ animationDelay: '0.75s', opacity: 0 }}
-          >
-            {techStack.map((tech) => (
-              <span
-                key={tech}
-                className="px-3 py-1.5 text-xs font-semibold bg-dark-3 text-text-secondary border border-dark-4 rounded-full hover:border-amber-glow/50 hover:text-amber-glow transition-all duration-200 cursor-default"
-              >
-                {tech}
+              className="mb-4 animate-fade-in"
+              style={{ animationDelay: '0.1s', opacity: 0 }}
+            >
+              <span className="text-amber-glow text-xs font-bold tracking-[0.3em] uppercase border border-amber-glow/30 px-3 py-1.5 rounded-full">
+                Hello, I&apos;m
               </span>
-            ))}
-          </div>
+            </div>
 
-          <div
-            className="flex flex-wrap items-center gap-4 mb-12 animate-fade-up"
-            style={{ animationDelay: '0.85s', opacity: 0 }}
-          >
-            <a
-              href={import.meta.env.VITE_RESUME_PATH}
-              download
-              className="group flex items-center gap-2.5 px-7 py-3.5 bg-amber-glow text-black font-bold text-sm rounded-full hover:bg-amber-light transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-amber-glow/20"
+            <h1
+              className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight mb-6 animate-fade-up"
+              style={{ animationDelay: '0.2s', opacity: 0 }}
             >
-              <Download size={16} />
-              Download Resume
-            </a>
-            <button
-              onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="flex items-center gap-2.5 px-7 py-3.5 border border-dark-4 text-text-secondary font-medium text-sm rounded-full hover:border-amber-glow/50 hover:text-white transition-all duration-200"
-            >
-              View My Work
-            </button>
-          </div>
+              {typedText}
+              {showCursor && (
+                <span className="text-amber-glow animate-blink">|</span>
+              )}
+            </h1>
 
-          <div
-            className="flex items-center gap-4 animate-fade-in"
-            style={{ animationDelay: '1s', opacity: 0 }}
-          >
-            {[
-              { Icon: Github, label: 'GitHub', href: import.meta.env.VITE_GITHUB_URL },
-              { Icon: Linkedin, label: 'LinkedIn', href: import.meta.env.VITE_LINKEDIN_URL },
-              // { Icon: Twitter, label: 'Twitter', href: '#' },
-            ].map(({ Icon, label, href }) => (
+            <p
+              className="text-lg sm:text-xl lg:text-2xl text-text-secondary font-light leading-relaxed mb-8 max-w-3xl animate-fade-up"
+              style={{ animationDelay: '0.5s', opacity: 0 }}
+            >
+              Software Engineer at
+              <span className="text-amber-glow font-medium"> Sify Technologies, turning hard problems into fast, reliable full-stack products.</span>
+            </p>
+
+            <div
+              className="flex flex-wrap gap-2 mb-10 animate-fade-up"
+              style={{ animationDelay: '0.75s', opacity: 0 }}
+            >
+              {techStack.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1.5 text-xs font-semibold bg-dark-3 text-text-secondary border border-dark-4 rounded-full hover:border-amber-glow/50 hover:text-amber-glow transition-all duration-200 cursor-default"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div
+              className="flex flex-wrap items-center gap-4 mb-12 animate-fade-up"
+              style={{ animationDelay: '0.85s', opacity: 0 }}
+            >
               <a
-                key={label}
-                href={href}
-                aria-label={label}
-                className="w-10 h-10 rounded-full border border-dark-4 flex items-center justify-center text-text-muted hover:border-amber-glow/50 hover:text-amber-glow hover:bg-amber-glow/5 transition-all duration-200"
+                href={import.meta.env.VITE_RESUME_PATH}
+                download
+                className="group flex items-center gap-2.5 px-7 py-3.5 bg-amber-glow text-black font-bold text-sm rounded-full hover:bg-amber-light transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-amber-glow/20"
               >
-                <Icon size={16} />
+                <Download size={16} />
+                Download Resume
               </a>
-            ))}
-          </div>
-        </div>
+              <button
+                onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
+                className="flex items-center gap-2.5 px-7 py-3.5 border border-dark-4 text-text-secondary font-medium text-sm rounded-full hover:border-amber-glow/50 hover:text-white transition-all duration-200"
+              >
+                View My Work
+              </button>
+            </div>
 
-        {/* Right Avatar GIF */}
-        <div 
-          className="hidden lg:flex w-full lg:w-1/3 justify-center items-center animate-fade-up pointer-events-none"
-          style={{ animationDelay: '1.2s', opacity: 0 }}
-        >
-          <div className="relative group pointer-events-auto">
-            {/* Ambient background glow to align with theme */}
-            <div className="absolute inset-0 bg-amber-glow/20 rounded-full blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-700" />
-            <div className="relative w-64 h-64 lg:w-[350px] lg:h-[350px] drop-shadow-[0_0_40px_rgba(245,197,24,0.15)] group-hover:drop-shadow-[0_0_60px_rgba(245,197,24,0.3)] hover:scale-105 transition-all duration-700 pointer-events-auto">
-              <DotLottieReact
-                src="https://lottie.host/d0654550-c350-4740-a185-a57f05fd30ca/5DbBSZGqT7.lottie"
-                stateMachineId="StateMachine1"
-              />
+            <div
+              className="flex items-center gap-4 animate-fade-in"
+              style={{ animationDelay: '1s', opacity: 0 }}
+            >
+              {[
+                { Icon: Github, label: 'GitHub', href: import.meta.env.VITE_GITHUB_URL },
+                { Icon: Linkedin, label: 'LinkedIn', href: import.meta.env.VITE_LINKEDIN_URL },
+                // { Icon: Twitter, label: 'Twitter', href: '#' },
+              ].map(({ Icon, label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className="w-10 h-10 rounded-full border border-dark-4 flex items-center justify-center text-text-muted hover:border-amber-glow/50 hover:text-amber-glow hover:bg-amber-glow/5 transition-all duration-200"
+                >
+                  <Icon size={16} />
+                </a>
+              ))}
             </div>
           </div>
-        </div>
+
+          {/* Right Avatar GIF */}
+          <div
+            className="hidden lg:flex w-full lg:w-1/3 justify-center items-center animate-fade-up pointer-events-none"
+            style={{ animationDelay: '1.2s', opacity: 0 }}
+          >
+            <div className="relative group pointer-events-auto">
+              {/* Ambient background glow to align with theme */}
+              <div className="absolute inset-0 bg-amber-glow/20 rounded-full blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-700" />
+              <div className="relative w-64 h-64 lg:w-[350px] lg:h-[350px] drop-shadow-[0_0_40px_rgba(245,197,24,0.15)] group-hover:drop-shadow-[0_0_60px_rgba(245,197,24,0.3)] hover:scale-105 transition-all duration-700 pointer-events-auto">
+                <DotLottieReact
+                  src="https://lottie.host/d0654550-c350-4740-a185-a57f05fd30ca/5DbBSZGqT7.lottie"
+                  stateMachineId="StateMachine1"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
