@@ -81,7 +81,7 @@ export default function Contact() {
         >
           <div className="mb-16">
             <span className="text-amber-glow text-xs font-bold tracking-[0.3em] uppercase">Get in Touch</span>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mt-3 leading-none">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mt-3 leading-tight sm:leading-none">
               <span className="block whitespace-nowrap">
                 {typedLine1}
                 {showCursor && typedLine2 === '' && (
