@@ -59,3 +59,72 @@ body {
 .animate-float-waving {
   animation: floatWaving 6s ease-in-out infinite;
 }
+
+/* Chat button pulse ring */
+@keyframes chatPing {
+  0% { transform: scale(1); opacity: 0.5; }
+  75%, 100% { transform: scale(1.6); opacity: 0; }
+}
+.animate-chat-ping {
+  animation: chatPing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Markdown inside chat bubbles */
+.chat-markdown p {
+  margin-bottom: 0.5em;
+}
+.chat-markdown p:last-child {
+  margin-bottom: 0;
+}
+.chat-markdown strong {
+  color: #F5C518;
+  font-weight: 600;
+}
+.chat-markdown em {
+  font-style: italic;
+  color: #cccccc;
+}
+.chat-markdown ul, .chat-markdown ol {
+  padding-left: 1.2em;
+  margin: 0.4em 0;
+}
+.chat-markdown ul {
+  list-style: disc;
+}
+.chat-markdown ol {
+  list-style: decimal;
+}
+.chat-markdown li {
+  margin-bottom: 0.25em;
+  color: #d1d5db;
+}
+.chat-markdown li::marker {
+  color: #F5C518;
+}
+.chat-markdown code {
+  background: rgba(245, 197, 24, 0.1);
+  border: 1px solid rgba(245, 197, 24, 0.15);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.85em;
+  color: #FFD84D;
+  font-family: 'Courier New', monospace;
+}
+.chat-markdown h1, .chat-markdown h2, .chat-markdown h3 {
+  font-family: 'Outfit', sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+}
+.chat-markdown h3 { font-size: 1em; }
+.chat-markdown h2 { font-size: 1.1em; }
+.chat-markdown a {
+  color: #F5C518;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.chat-markdown a:hover {
+  color: #FFD84D;
+}
+
