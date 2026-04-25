@@ -4,6 +4,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
+import { AIChatWidget } from './components/AIChatWidget';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Certifications />
         <Contact />
       </main>
+      <AIChatWidget />
       <Footer />
     </div>
   );
