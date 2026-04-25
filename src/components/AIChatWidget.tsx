@@ -11,7 +11,7 @@ interface Message {
 export const AIChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: "Hey there! 👋 I'm **Lokesh's AI assistant**. Ask me anything about his skills, projects, or background!" }
+    { role: 'assistant', content: "Hey there! 👋 I'm **Nexus** — Lokesh's personal AI assistant. Ask me anything about his skills, projects, experience — or just chat about tech!" }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -114,8 +114,8 @@ export const AIChatWidget = () => {
               <Bot className="w-5 h-5" />
             </div>
             <div className="flex-1">
-              <h3 className="font-heading font-semibold text-white text-sm">Lokesh AI</h3>
-              <p className="text-[11px] text-text-muted">Powered by Sarvam AI</p>
+              <h3 className="font-heading font-semibold text-white text-sm">Nexus</h3>
+              <p className="text-[11px] text-text-muted">Lokesh's AI Assistant</p>
             </div>
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
