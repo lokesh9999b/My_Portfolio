@@ -22,7 +22,7 @@ function GalaxyCanvas() {
       canvas.height = canvas.offsetHeight;
     };
     resize();
-    window.addEventListener('resize', resize);
+    window.addEventListener('resize', resize, { passive: true });
 
     // ── Stars
     const STAR_COUNT = 220;
