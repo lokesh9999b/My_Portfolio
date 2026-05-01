@@ -129,7 +129,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
               href={project.liveUrl} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-2.5 px-6 py-3 bg-accent text-accent-contrast text-sm font-bold rounded-full hover:bg-accent-hover hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 hover:-translate-y-1 active:translate-y-0"
+              className="flex w-full sm:w-auto items-center justify-center gap-2.5 px-6 py-3 bg-accent text-accent-contrast text-sm font-bold rounded-full hover:bg-accent-hover hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 hover:-translate-y-1 active:translate-y-0"
             >
               <ExternalLink size={16} strokeWidth={2.5} />
               Live Demo
@@ -139,7 +139,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
               type="button"
               disabled
               aria-disabled="true"
-              className="disabled-action flex items-center gap-2.5 px-6 py-3 text-sm font-bold rounded-full cursor-not-allowed"
+              className="disabled-action flex w-full sm:w-auto items-center justify-center gap-2.5 px-6 py-3 text-sm font-bold rounded-full cursor-not-allowed"
             >
               <ExternalLink size={16} strokeWidth={2.5} />
               Internal Demo
@@ -151,7 +151,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
               href={project.githubUrl} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-2.5 px-6 py-3 border text-primary text-sm font-bold rounded-full border-theme hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 backdrop-blur-sm group/btn"
+              className="flex w-full sm:w-auto items-center justify-center gap-2.5 px-6 py-3 border text-primary text-sm font-bold rounded-full border-theme hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 backdrop-blur-sm group/btn"
             >
               <Github size={16} className="group-hover/btn:text-accent transition-colors" />
               Source Code
@@ -161,7 +161,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
               type="button"
               disabled
               aria-disabled="true"
-              className="disabled-action flex items-center gap-2.5 px-6 py-3 text-sm font-bold rounded-full cursor-not-allowed"
+              className="disabled-action flex w-full sm:w-auto items-center justify-center gap-2.5 px-6 py-3 text-sm font-bold rounded-full cursor-not-allowed"
             >
               <BookOpen size={16} />
               Proprietary Code
@@ -228,7 +228,7 @@ export default function Projects() {
             <a
               href="#contact"
               onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-surface/70 hover:bg-accent/10 border border-theme hover:border-accent/30 text-primary text-sm font-semibold transition-all duration-300 group whitespace-nowrap"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 rounded-full bg-surface/70 hover:bg-accent/10 border border-theme hover:border-accent/30 text-primary text-sm font-semibold transition-all duration-300 group sm:whitespace-nowrap"
             >
               Collaborate With Me
               <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent transition-transform" />
