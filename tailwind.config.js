@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -8,16 +9,32 @@ export default {
         heading: ['Outfit', 'sans-serif'],
       },
       colors: {
-        'amber-glow': '#F5C518',
-        'amber-light': '#FFD84D',
+        app: 'rgb(var(--color-app) / <alpha-value>)',
+        section: 'rgb(var(--color-section) / <alpha-value>)',
+        surface: 'rgb(var(--color-surface) / <alpha-value>)',
+        elevated: 'rgb(var(--color-elevated) / <alpha-value>)',
+        theme: 'rgb(var(--color-border) / <alpha-value>)',
+        primary: 'rgb(var(--color-text-primary) / <alpha-value>)',
+        muted: 'rgb(var(--color-text-muted) / <alpha-value>)',
+        subtle: 'rgb(var(--color-text-subtle) / <alpha-value>)',
+        accent: 'rgb(var(--color-accent) / <alpha-value>)',
+        'accent-hover': 'rgb(var(--color-accent-hover) / <alpha-value>)',
+        'accent-contrast': 'rgb(var(--color-accent-contrast) / <alpha-value>)',
+        'shadow-glow': 'rgb(var(--color-shadow-glow) / <alpha-value>)',
+        'hero-nebula': 'rgb(var(--color-hero-nebula) / <alpha-value>)',
+        'project-deep': 'rgb(var(--color-project-deep) / <alpha-value>)',
+
+        // Backward-compatible aliases while components migrate to semantic tokens.
+        'amber-glow': 'rgb(var(--color-accent) / <alpha-value>)',
+        'amber-light': 'rgb(var(--color-accent-hover) / <alpha-value>)',
         'amber-dark': '#C9980A',
-        'near-black': '#0A0A0A',
-        'dark-1': '#111111',
-        'dark-2': '#1A1A1A',
-        'dark-3': '#252525',
-        'dark-4': '#333333',
-        'text-muted': '#888888',
-        'text-secondary': '#BBBBBB',
+        'near-black': 'rgb(var(--color-app) / <alpha-value>)',
+        'dark-1': 'rgb(var(--color-section) / <alpha-value>)',
+        'dark-2': 'rgb(var(--color-surface) / <alpha-value>)',
+        'dark-3': 'rgb(var(--color-elevated) / <alpha-value>)',
+        'dark-4': 'rgb(var(--color-border) / <alpha-value>)',
+        'text-muted': 'rgb(var(--color-text-subtle) / <alpha-value>)',
+        'text-secondary': 'rgb(var(--color-text-muted) / <alpha-value>)',
       },
       animation: {
         'fade-up': 'fadeUp 0.8s ease forwards',
