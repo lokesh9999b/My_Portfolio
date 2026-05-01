@@ -39,7 +39,7 @@ export default function Skills() {
           className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
           <div className="mb-16">
-            <span className="text-accent text-xs font-bold tracking-[0.3em] uppercase">Expertise</span>
+            <span className="theme-eyebrow text-xs tracking-[0.3em] uppercase">Expertise</span>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-primary mt-3 leading-tight">
               Skills
             </h2>

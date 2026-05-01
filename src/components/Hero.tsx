@@ -219,7 +219,7 @@ export default function Hero() {
               className="mb-4 animate-fade-in"
               style={{ animationDelay: '0.1s', opacity: 0 }}
             >
-              <span className="text-accent text-xs font-bold tracking-[0.3em] uppercase border border-accent/30 bg-surface/40 px-3 py-1.5 rounded-full">
+              <span className="theme-eyebrow text-xs tracking-[0.3em] uppercase border border-accent/30 bg-surface/40 px-3 py-1.5 rounded-full">
                 Hello, I&apos;m
               </span>
             </div>

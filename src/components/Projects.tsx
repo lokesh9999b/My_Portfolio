@@ -70,15 +70,15 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       <div className="w-full md:w-[55%] relative z-10 perspective-1000">
         <div className="relative rounded-[2rem] overflow-hidden aspect-[4/3] border border-theme/60 bg-surface shadow-2xl transition-all duration-700 group-hover:border-accent/30 group-hover:shadow-accent/20 group-hover:-translate-y-2">
           {/* Default Grayscale mapping -> Color on hover */}
-          <div className="absolute inset-0 bg-surface mix-blend-overlay opacity-40 group-hover:opacity-0 transition-opacity duration-700 z-10" />
+          <div className="project-image-wash" />
           <img
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 scale-[1.02]"
           />
           {/* Glass Gradient Header */}
-          <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/80 via-black/30 to-transparent z-10 opacity-70 group-hover:opacity-20 transition-opacity duration-700" />
-          <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-project-deep via-project-deep/80 to-transparent z-10 opacity-90" />
+          <div className="project-image-top-fade" />
+          <div className="project-image-bottom-fade" />
           
           <div className="absolute top-6 left-6 z-20 overflow-hidden rounded-full backdrop-blur-md bg-white/10 border border-white/20 px-4 py-1.5 shadow-lg">
             <span className="text-white text-xs font-bold tracking-widest uppercase flex items-center gap-2">
@@ -93,7 +93,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       <div className="w-full md:w-[45%] flex flex-col justify-center relative z-10">
         <div className="flex items-center gap-4 mb-5">
           <div className="h-px flex-grow bg-gradient-to-r from-accent/0 via-accent/50 to-accent/0 md:hidden" />
-          <span className="text-accent font-mono text-sm tracking-widest uppercase opacity-80 hidden md:block">
+          <span className="project-kicker font-mono text-sm tracking-widest uppercase hidden md:block">
             Showcase
           </span>
           <div className="h-px w-12 bg-accent/50 hidden md:block" />
@@ -135,7 +135,12 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
               Live Demo
             </a>
           ) : (
-            <button disabled className="flex items-center gap-2.5 px-6 py-3 bg-elevated text-subtle text-sm font-bold rounded-full border border-theme cursor-not-allowed opacity-70">
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              className="disabled-action flex items-center gap-2.5 px-6 py-3 text-sm font-bold rounded-full cursor-not-allowed"
+            >
               <ExternalLink size={16} strokeWidth={2.5} />
               Internal Demo
             </button>
@@ -152,7 +157,12 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
               Source Code
             </a>
           ) : (
-            <button disabled className="flex items-center gap-2.5 px-6 py-3 border text-subtle text-sm font-bold rounded-full border-theme cursor-not-allowed opacity-70">
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              className="disabled-action flex items-center gap-2.5 px-6 py-3 text-sm font-bold rounded-full cursor-not-allowed"
+            >
               <BookOpen size={16} />
               Proprietary Code
             </button>
@@ -198,11 +208,11 @@ export default function Projects() {
       <div className="max-w-[85rem] mx-auto px-6 lg:px-12 relative z-10">
         <div
           ref={ref}
-          className={`mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          className={`mb-14 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-surface/70 border border-theme backdrop-blur-md mb-6">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-muted text-xs font-bold tracking-widest uppercase">Portfolio</span>
+            <span className="theme-eyebrow text-xs tracking-widest uppercase">Portfolio</span>
           </div>
           
           <div className="flex flex-col md:flex-row md:items-end justify-between mt-2 gap-6">

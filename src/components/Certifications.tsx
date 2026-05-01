@@ -128,9 +128,9 @@ const Certifications = () => {
               {certificationsList.map((cert, idx) => (
                 <div 
                   key={idx} 
-                  className="mx-4 flex-shrink-0 w-[280px] bg-surface rounded-xl p-6 border border-theme hover:border-accent/50 hover:shadow-lg hover:shadow-accent/20 transition-all duration-300 flex flex-col items-center justify-center text-center gap-3 cursor-pointer"
+                  className="cert-card mx-3 flex-shrink-0 w-[260px] md:w-[270px] bg-surface rounded-xl border border-theme hover:border-accent/50 hover:shadow-lg hover:shadow-accent/20 transition-all duration-300 flex flex-col items-center justify-center text-center gap-3 cursor-pointer"
                 >
-                  <div className="w-16 h-16 flex items-center justify-center bg-elevated rounded-xl mb-2 drop-shadow-md">
+                  <div className="cert-icon-tile flex items-center justify-center bg-elevated rounded-xl mb-1.5 drop-shadow-md">
                     {cert.image ? (
                       <img src={cert.image} alt={cert.issuer} className={`max-w-[70%] max-h-[70%] object-contain ${cert.style || ''}`} />
                     ) : (
@@ -138,10 +138,10 @@ const Certifications = () => {
                     )}
                   </div>
                   <div className="w-full">
-                    <h3 className="text-primary font-medium text-base whitespace-normal leading-tight line-clamp-2 min-h-[2.5rem] flex items-center justify-center">
+                    <h3 className="text-primary font-semibold text-sm whitespace-normal leading-tight line-clamp-2 min-h-[2.35rem] flex items-center justify-center">
                       {cert.title}
                     </h3>
-                    <p className="text-accent/80 text-xs mt-2 uppercase tracking-wider font-semibold">
+                    <p className="cert-issuer text-xs mt-2 uppercase tracking-wider">
                       {cert.issuer}
                     </p>
                   </div>
