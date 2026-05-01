@@ -80,7 +80,7 @@ export default function Contact() {
           className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
           <div className="mb-16">
-            <span className="text-accent text-xs font-bold tracking-[0.3em] uppercase">Get in Touch</span>
+            <span className="theme-eyebrow text-xs tracking-[0.3em] uppercase">Get in Touch</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mt-3 leading-tight sm:leading-none">
               <span className="block whitespace-nowrap">
                 {typedLine1}
@@ -164,7 +164,7 @@ export default function Contact() {
                         value={form.name}
                         onChange={handleChange}
                         placeholder="Jane Smith"
-                        className="w-full bg-elevated border border-theme text-primary text-sm rounded-xl px-4 py-3 placeholder-subtle focus:outline-none focus:border-accent/60 focus:bg-elevated/80 transition-all duration-200"
+                        className="contact-field w-full text-sm rounded-xl px-4 py-3"
                       />
                     </div>
                     <div>
@@ -179,7 +179,7 @@ export default function Contact() {
                         value={form.email}
                         onChange={handleChange}
                         placeholder="jane@company.com"
-                        className="w-full bg-elevated border border-theme text-primary text-sm rounded-xl px-4 py-3 placeholder-subtle focus:outline-none focus:border-accent/60 focus:bg-elevated/80 transition-all duration-200"
+                        className="contact-field w-full text-sm rounded-xl px-4 py-3"
                       />
                     </div>
                   </div>
@@ -195,7 +195,7 @@ export default function Contact() {
                       value={form.role_or_project}
                       onChange={handleChange}
                       placeholder="e.g. Senior Backend Engineer / Scaling a payment system"
-                      className="w-full bg-elevated border border-theme text-primary text-sm rounded-xl px-4 py-3 placeholder-subtle focus:outline-none focus:border-accent/60 focus:bg-elevated/80 transition-all duration-200"
+                      className="contact-field w-full text-sm rounded-xl px-4 py-3"
                     />
                   </div>
 
@@ -211,7 +211,7 @@ export default function Contact() {
                       value={form.message}
                       onChange={handleChange}
                       placeholder="Tell me about the challenge you're solving..."
-                      className="w-full bg-elevated border border-theme text-primary text-sm rounded-xl px-4 py-3 placeholder-subtle focus:outline-none focus:border-accent/60 focus:bg-elevated/80 transition-all duration-200 resize-none"
+                      className="contact-field w-full text-sm rounded-xl px-4 py-3 resize-none"
                     />
                   </div>
 
