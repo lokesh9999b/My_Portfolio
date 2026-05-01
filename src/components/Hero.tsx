@@ -263,14 +263,14 @@ export default function Hero() {
               <a
                 href={import.meta.env.VITE_RESUME_PATH}
                 download
-                className="group flex items-center gap-2.5 px-7 py-3.5 bg-accent text-accent-contrast font-bold text-sm rounded-full hover:bg-accent-hover transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-accent/20"
+                className="group flex w-full sm:w-auto items-center justify-center gap-2.5 px-7 py-3.5 bg-accent text-accent-contrast font-bold text-sm rounded-full hover:bg-accent-hover transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-accent/20"
               >
                 <Download size={16} />
                 Download Resume
               </a>
               <button
                 onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-                className="flex items-center gap-2.5 px-7 py-3.5 border border-theme text-muted font-medium text-sm rounded-full hover:border-accent/50 hover:text-primary transition-all duration-200"
+                className="flex w-full sm:w-auto items-center justify-center gap-2.5 px-7 py-3.5 border border-theme text-muted font-medium text-sm rounded-full hover:border-accent/50 hover:text-primary transition-all duration-200"
               >
                 View My Work
               </button>

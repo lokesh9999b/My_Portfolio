@@ -82,13 +82,13 @@ export default function Contact() {
           <div className="mb-16">
             <span className="theme-eyebrow text-xs tracking-[0.3em] uppercase">Get in Touch</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mt-3 leading-tight sm:leading-none">
-              <span className="block whitespace-nowrap">
+              <span className="block sm:whitespace-nowrap">
                 {typedLine1}
                 {showCursor && typedLine2 === '' && (
                   <span className="text-accent animate-pulse">|</span>
                 )}
               </span>
-              <span className="block text-accent whitespace-nowrap">
+              <span className="block text-accent sm:whitespace-nowrap">
                 {typedLine2}
                 {showCursor && typedLine2.length > 0 && (
                   <span className="animate-pulse">|</span>
@@ -114,9 +114,9 @@ export default function Contact() {
                     <div className="w-10 h-10 rounded-xl bg-elevated border border-theme flex items-center justify-center flex-shrink-0">
                       <Icon size={16} className="text-accent" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-subtle text-xs font-medium uppercase tracking-wider">{label}</p>
-                      <p className="text-primary text-sm font-medium mt-0.5">{value}</p>
+                      <p className="text-primary text-sm font-medium mt-0.5 break-words">{value}</p>
                     </div>
                   </div>
                 ))}
@@ -150,7 +150,7 @@ export default function Contact() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="bg-surface border border-theme rounded-2xl p-8 space-y-5">
+                <form onSubmit={handleSubmit} className="bg-surface border border-theme rounded-2xl p-5 sm:p-8 space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                       <label htmlFor="name" className="block text-subtle text-xs font-semibold uppercase tracking-wider mb-2">
@@ -225,17 +225,17 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === 'loading'}
-                    className="w-full flex items-center justify-center gap-2.5 py-4 bg-accent text-accent-contrast font-bold text-sm rounded-xl hover:bg-accent-hover transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed shadow-lg shadow-accent/20"
+                    className="w-full min-h-[3.25rem] flex items-center justify-center gap-2.5 px-3 py-3.5 sm:py-4 bg-accent text-accent-contrast font-bold text-xs sm:text-sm leading-snug text-center rounded-xl hover:bg-accent-hover transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed shadow-lg shadow-accent/20"
                   >
                     {status === 'loading' ? (
                       <>
-                        <div className="w-4 h-4 border-2 border-accent-contrast/30 border-t-accent-contrast rounded-full animate-spin" />
-                        Sending...
+                        <div className="w-4 h-4 border-2 border-accent-contrast/30 border-t-accent-contrast rounded-full animate-spin flex-shrink-0" />
+                        <span>Sending...</span>
                       </>
                     ) : (
                       <>
-                        <Send size={15} />
-                        Send Message &amp; Book a 15-min Call
+                        <Send size={15} className="flex-shrink-0" />
+                        <span>Send Message &amp; Book a 15-min Call</span>
                       </>
                     )}
                   </button>
