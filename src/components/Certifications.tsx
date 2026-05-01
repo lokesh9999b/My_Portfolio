@@ -1,4 +1,3 @@
-import React from 'react';
 import { Award, BookOpen, Code2, Medal } from 'lucide-react';
 
 const certificationsList = [
@@ -32,7 +31,7 @@ const certificationsList = [
   {
     title: "AWS Certified Developer Associate 2024",
     issuer: "Udemy",
-    icon: <BookOpen className="w-8 h-8 text-amber-glow" />
+    icon: <BookOpen className="w-8 h-8 text-accent" />
   },
   {
     title: "Data, ML, and AI Tasks",
@@ -77,40 +76,40 @@ const certificationsList = [
   {
     title: "E-Commerce Level 1.1",
     issuer: "Unstop",
-    icon: <Award className="w-8 h-8 text-amber-glow" />
+    icon: <Award className="w-8 h-8 text-accent" />
   },
   {
     title: "Python Basic",
     issuer: "HackerRank",
-    icon: <Code2 className="w-8 h-8 text-amber-glow" />
+    icon: <Code2 className="w-8 h-8 text-accent" />
   },
   {
     title: "Machine Learning",
     issuer: "Hewlett Group",
-    icon: <Medal className="w-8 h-8 text-amber-glow" />
+    icon: <Medal className="w-8 h-8 text-accent" />
   },
   {
     title: "Data Analytics with Python",
     issuer: "NPTEL",
-    icon: <Code2 className="w-8 h-8 text-amber-glow" />
+    icon: <Code2 className="w-8 h-8 text-accent" />
   },
   {
     title: "Cloud Development with HTML/CSS/JS",
     issuer: "IBM",
-    icon: <BookOpen className="w-8 h-8 text-amber-glow" />
+    icon: <BookOpen className="w-8 h-8 text-accent" />
   }
 ];
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-20 relative bg-near-black">
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-dark-4 to-transparent blur-sm"></div>
+    <section id="certifications" className="py-20 relative bg-app">
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-theme to-transparent blur-sm"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <h2 className="text-3xl md:text-5xl font-heading font-bold text-white text-center mb-4">
-          My <span className="text-amber-glow">Certifications</span>
+        <h2 className="text-3xl md:text-5xl font-heading font-bold text-primary text-center mb-4">
+          My <span className="text-accent">Certifications</span>
         </h2>
-        <p className="text-text-muted text-center max-w-2xl mx-auto">
+        <p className="text-subtle text-center max-w-2xl mx-auto">
           A showcase of my continuous learning and professional validations across top cloud providers and technology platforms.
         </p>
       </div>
@@ -118,8 +117,8 @@ const Certifications = () => {
       {/* Scroller Container */}
       <div className="w-full overflow-hidden flex flex-col gap-6 relative py-4">
         {/* Gradients for fading effect on edges */}
-        <div className="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-near-black to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-near-black to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-app to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-app to-transparent z-10 pointer-events-none"></div>
 
         {/* Marquee Row */}
         <div className="flex w-fit group">
@@ -129,9 +128,9 @@ const Certifications = () => {
               {certificationsList.map((cert, idx) => (
                 <div 
                   key={idx} 
-                  className="mx-4 flex-shrink-0 w-[280px] bg-dark-2 rounded-xl p-6 border border-dark-4 hover:border-amber-glow/50 hover:shadow-[0_0_15px_rgba(245,197,24,0.15)] transition-all duration-300 flex flex-col items-center justify-center text-center gap-3 cursor-pointer"
+                  className="mx-4 flex-shrink-0 w-[280px] bg-surface rounded-xl p-6 border border-theme hover:border-accent/50 hover:shadow-lg hover:shadow-accent/20 transition-all duration-300 flex flex-col items-center justify-center text-center gap-3 cursor-pointer"
                 >
-                  <div className="w-16 h-16 flex items-center justify-center bg-dark-3 rounded-xl mb-2 drop-shadow-md">
+                  <div className="w-16 h-16 flex items-center justify-center bg-elevated rounded-xl mb-2 drop-shadow-md">
                     {cert.image ? (
                       <img src={cert.image} alt={cert.issuer} className={`max-w-[70%] max-h-[70%] object-contain ${cert.style || ''}`} />
                     ) : (
@@ -139,10 +138,10 @@ const Certifications = () => {
                     )}
                   </div>
                   <div className="w-full">
-                    <h3 className="text-white font-medium text-base whitespace-normal leading-tight line-clamp-2 min-h-[2.5rem] flex items-center justify-center">
+                    <h3 className="text-primary font-medium text-base whitespace-normal leading-tight line-clamp-2 min-h-[2.5rem] flex items-center justify-center">
                       {cert.title}
                     </h3>
-                    <p className="text-amber-glow/80 text-xs mt-2 uppercase tracking-wider font-semibold">
+                    <p className="text-accent/80 text-xs mt-2 uppercase tracking-wider font-semibold">
                       {cert.issuer}
                     </p>
                   </div>
