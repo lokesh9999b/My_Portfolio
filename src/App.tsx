@@ -4,11 +4,12 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
+import { AIChatWidget } from './components/AIChatWidget';
 import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="bg-near-black min-h-screen">
+    <div className="bg-app min-h-screen text-primary transition-colors duration-200">
       <Navbar />
       <main>
         <Hero />
@@ -17,6 +18,7 @@ export default function App() {
         <Certifications />
         <Contact />
       </main>
+      <AIChatWidget />
       <Footer />
     </div>
   );
